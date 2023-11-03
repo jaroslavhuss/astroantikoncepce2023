@@ -1,22 +1,22 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Antikoncepce.com
+  site: 'https://antikoncepce.com'
   base: '/'
-  trailingSlash: false
+  trailingSlash: true
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: Antikoncepce.com — nejrozsáhlejší český web o antikoncepci
+    template: '%s — Antikoncepce.com'
+  description: 'Anikoncepce.com je nejrozsáhlejší český web o antikoncepci. Najdete zde informace o všech dostupných antikoncepčních metodách, jejich výhodách a nevýhodách, vedlejších účincích a dalších zajímavostech.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: Antikoncepce.com
     images:
       - url: '~/assets/images/default.png'
         width: 1200
@@ -28,13 +28,13 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: cs
   textDirection: ltr
 
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 6
+    postsPerPage: 4
 
     post:
       isEnabled: true
@@ -44,19 +44,19 @@ apps:
 
     list:
       isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'clanky' # Blog main path, you can change this to "articles" (/articles)
       robots:
         index: true
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'kategorie' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      pathname: 'tagy' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
         index: false
 
@@ -66,7 +66,7 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'light' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   tokens:
     default:

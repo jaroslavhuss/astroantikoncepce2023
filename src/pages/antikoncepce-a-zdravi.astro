@@ -1,0 +1,111 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import LatestPostsGlobal from '~/components/blog/LatestPostsGlobal.astro';
+
+const meta = {
+  title: 'Antikoncepce a zdraví - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout metadata={meta}>
+  <Content
+    title="Antikoncepce a zdraví"
+    items={[
+      {
+        title: 'Regulace menstruačního krvácení a menstruačních bolestí',
+        description: '',
+      },
+      {
+        title: 'Kontraceptiva účinně léčí děložní krvácení neorganického původu.',
+        description: '',
+      },
+      {
+        title: 'Upravují nepravidelné krvácení a mírní silné menstruační bolesti.',
+        description: '',
+      },
+      {
+        title: 'Výskyt anémie z nedostatku železa (chudokrevnosti) je během užívání tablet nižší.',
+        description: '',
+      },
+      {
+        title: 'Tablety upravují rovnováhu ženských hormonů, jejichž nedostatek je často vyvolaný stresem.',
+        description: '',
+      },
+      {
+        title:
+          'Ženy s nepravidelným menstruačním krvácením otěhotní s nižší pravděpodobností. V případě chtěného těhotenství je hlavním úkolem vyléčení základního onemocnění, poruchy ovulace. V ostatních případech může pomoci antikoncepce. Často se stává, že menstruační cyklus je po vysazení antikoncepce nepravidelný. V tomto případě porucha cyklu není způsobena tabletami. Antikoncepce zakryla již existující poruchu v hormonální rovnováze a zabránila jejím možným pozdním komplikacím.',
+        description: '',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/antikoncepce_ochranuje_zdravi.png',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Antikoncepční tablety mimo jiné ochraňují zdraví
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Features2
+    items={[
+      {
+        title: 'Premenstruační syndrom',
+        description:
+          'Je to stav, který nastává v týdnu před menstruací a je způsoben hormonální dysbalancí a retencí (zadržováním) vody v těle. Je provázený zvýšením hmotnosti, zvýšenou psychickou podrážděností, změnami chuti k jídlu, bolestmi hlavy, poruchami spánku apod. Používáním vhodných tablet se stav zlepšuje.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Prevence zánětů v oblasti pánve',
+        description:
+          'Nejčastějším patogenním mikroorganismem je Chlamydia trachomatis. Během užívání antikoncepce se infekce Chlamydií vyskytuje méně často, protože díky tabletám se hlen děložního krčku stává obtížně prostupným pro tyto patogeny. Pánevní záněty způsobené Chlamydií jsou nejčastější příčinou neplodnosti. Takže antikoncepce nejen že nezpůsobuje neplodnost, ale částečně chrání proti dvěma nejčastějším organickým příčinám neplodnosti (druhou je endometrióza). Tablety tedy chrání plodnost žen.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Prevence nádorových onemocnění vaječníků',
+        description:
+          'Hormonální antikoncepce snižuje asi o 50% riziko vzniku nádoru vaječníku. Bylo dokázáno, že vznik nádoru vaječníku je přímo úměrný počtu ovulací během života. Proto trvalé potlačení ovulace chrání před tímto často smrtelným onemocněním.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Prevence rakoviny děložní sliznice',
+        description:
+          'Zhoubné nádory děložní sliznice mohou být způsobeny poruchou hormonální rovnováhy, která způsobuje také poruchy menstruačního cyklu a plodnosti. Tato rovnováha může být zcela upravena antikoncepcí.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Prevence nezhoubných onemocnění dělohy, prsu a cyst prsu, zmírnění endometriózy',
+        description:
+          'Také tato onemocnění se rozvíjejí vlivem dříve zmíněné hormonální nerovnováhy. Pokud se pomocí antikoncepčních tablet stabilizuje hladina hormonů, tato onemocnění se výrazně zmírní.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Prevence aterosklerózy (kornatění cév)',
+        description:
+          'Ateroskleróza je způsobena souhrou mnoha faktorů. Vliv mají hladiny krevních tuků, které jsou dány jak geneticky, tak jsou závislé na výživě, hladina cukru v krvi, krevní tlak, chronická zánětlivá onemocnění atd. Antikoncepce s estrogenem ovlivňuje příznivě hladiny tuků a působí kladně i na stěnu cév.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Zpomalení procesu řídnutí kostí (osteroporózy)',
+        description:
+          'Příčinou osteoporózy u žen je zejména nedostatek estrogenů. Ten může nastat již před menopauzou. Hormonální antikoncepce je schopna zabránit časné osteoporóze udržením téměř optimální hormonální rovnováhy.',
+        icon: 'tabler:info-circle',
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <LatestPostsGlobal />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- CallToAction Widget *********** -->
+</Layout>

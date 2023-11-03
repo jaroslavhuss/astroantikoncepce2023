@@ -13,21 +13,27 @@
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "dependencies": {
+    "@astrojs/react": "^3.0.4",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "@astrolib/analytics": "^0.4.2",
     "@astrolib/seo": "^1.0.0-beta.4",
+    "@emailjs/browser": "^3.11.0",
     "@fontsource-variable/inter": "^5.0.8",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "astro": "^3.1.2",
     "astro-icon": "^1.0.0-next.2",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "unpic": "^3.10.0"
   },
   "devDependencies": {
     "@astrojs/mdx": "^1.1.0",
     "@astrojs/partytown": "^2.0.0",
-    "@astrojs/tailwind": "5.0.0",
+    "@astrojs/tailwind": "^5.0.2",
     "@iconify-json/flat-color-icons": "^1.1.7",
     "@iconify-json/tabler": "^1.1.91",
     "@tailwindcss/typography": "^0.5.10",
@@ -35,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
     "astro-compress": "^2.0.15",
+    "daisyui": "^3.9.4",
     "eslint": "^8.49.0",
     "eslint-plugin-astro": "^0.29.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -44,7 +51,7 @@
     "prettier-plugin-astro": "^0.12.0",
     "reading-time": "^1.5.0",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss": "^3.3.3",
+    "tailwindcss": "^3.0.24",
     "typescript": "^5.2.2"
   },
   "engines": {

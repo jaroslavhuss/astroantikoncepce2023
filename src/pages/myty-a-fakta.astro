@@ -1,0 +1,87 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import LatestPostsGlobal from '~/components/blog/LatestPostsGlobal.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+const meta = {
+  title: 'Mýty a fakta - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout metadata={meta}>
+  <!-- Content Widget **************** -->
+  <FAQs
+    subtitle="10 nejčastějších pověr o antikoncepčních pilulkách (kombinované hormonální antikoncepci - COC)"
+    title="Mýty a fakta"
+    items={[
+      {
+        title: 'Pověra: Pilulka je spolehlivá asi jako kondom',
+        description:
+          'Skutečnost: Pilulka je asi 30x spolehlivější než kondom. Při používání prezervativu otěhotní během jednoho roku asi 15 % žen. Při užívání pilulky otěhotní během jednoho roku asi 0,5 % žen.',
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Při užívání pilulek se tloustne.',
+        description:
+          'Pilulka neovlivňuje váhový přírůstek. Průměrný váhový přírůstek u žen, které užívají pilulku, je stejný jako u žen, které užívají jiné metody antikoncepce (asi 0,5 kg za rok). Také počet žen, které náhle přibraly, je stejný.',
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Pilulky se nemohou užívat dlouhodobě.',
+        description: `Pilulky se dlouhodobě užívat mohou.
+V minulosti se doporučovalo uvážit další užívání pilulky po 15 letech, dnes už neplatí ani to, doba užívání pilulky není omezena. Vynechávání pilulek na nějakou dobu, např. po roce užívání, nemá žádný význam.`,
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Umělé hormony pilulky jsou škodlivé.',
+        description: `Hormony pilulky odpovídají přirozeným hormonům vaječníku. Jejich vzájemný poměr je však výhodnější než v přirozeném cyklu; proto užívání pilulky chrání do jisté míry před rakovinou dělohy a vaječníku a některými dalšími nemocemi.`,
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: V týdenní pauze není žena chráněna.',
+        description: `Ochrana ženy je plně zajištěna i v 4-7denní pauze. Pilulka je konstruována tak, aby ochrana před otěhotněním trvala i během přestávky v užívání. Není zapotřebí žádných dalších opatření.`,
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Pilulka se musí vynechat několik měsíců před otěhotněním.',
+        description: `Může se otěhotnět hned v prvním cyklu po vysazení pilulky. `,
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Pilulka zvyšuje riziko neplodnosti.',
+        description: `Pilulka snižuje riziko neplodnosti.
+Pilulka chrání průchodnost vejcovodů, protože snižuje výskyt všech nemocí, které ji způsobují (záněty vejcovodů, mimoděložní těhotenství, operace cyst vaječníků, endometrióza) - tím chrání i další plodnost ženy.`,
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Při užívání pilulky se musí kontrolovat jaterní testy.',
+        description: `Provádění jaterních testů je zbytečné. Pouze u žen, které v nedávné době prodělaly onemocnění jater, je vhodné vyšetření jaterních testů provést a pak ho opakovat za 3 měsíce. Je-li i pak výsledek normální, další kontroly jsou zbytečné.`,
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Pilulka vyvolává a zhoršuje křečové žíly.',
+        description: `Pilulka nemá vliv na vznik a zhoršení varixů.
+Pilulka nijak neovlivňuje vznik a další zhoršování křečových žil. (Vztah pilulky k žilním problémům je jiný. Pilulka mírně zvyšuje riziko trombózy hlubokých žil.)`,
+        icon: 'tabler:brand-hipchat',
+      },
+      {
+        title: 'Pověra: Pilulka zvyšuje riziko rakoviny prsu.',
+        description: `Pilulka neovliňuje riziko rakoviny prsu.
+Pilulka dokonce chrání před nezhoubnými nádory prsu a chrání také před rakovinou dělohy, vaječníku a tlustého střeva. (Riziko rakoviny prsu však mírně zvyšuje pozdní první těhotenství.)`,
+        icon: 'tabler:brand-hipchat',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <LatestPostsGlobal />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- CallToAction Widget *********** -->
+</Layout>

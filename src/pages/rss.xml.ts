@@ -1,11 +1,11 @@
-import { getRssString } from '@astrojs/rss';
+import rss from '@astrojs/rss';
 
-import { SITE, METADATA, APP_BLOG } from '~/utils/config';
+import { SITE, BLOG } from '~/config.mjs';
 import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
 
-export const GET = async () => {
-  if (!APP_BLOG.isEnabled) {
+export const get = async () => {
+  if (BLOG.disabled) {
     return new Response(null, {
       status: 404,
       statusText: 'Not found',
@@ -14,24 +14,18 @@ export const GET = async () => {
 
   const posts = await fetchPosts();
 
-  const rss = await getRssString({
+  return rss({
     title: `${SITE.name}’s Blog`,
-    description: METADATA?.description || '',
+    description: SITE.description,
     site: import.meta.env.SITE,
 
     items: posts.map((post) => ({
       link: getPermalink(post.permalink, 'post'),
       title: post.title,
-      description: post.excerpt,
+      description: post.description,
       pubDate: post.publishDate,
     })),
 
-    trailingSlash: SITE.trailingSlash,
-  });
-
-  return new Response(rss, {
-    headers: {
-      'Content-Type': 'application/xml',
-    },
+    trailingSlash: SITE.trailingSlash
   });
 };

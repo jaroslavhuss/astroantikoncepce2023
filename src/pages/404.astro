@@ -1,7 +1,8 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 import { getHomePermalink } from '~/utils/permalinks';
-
+import { Picture } from 'astro:assets';
+import Tym from '../assets/images/it_tym_antikoncepcecom.png';
 const title = `Error 404`;
 ---
 
@@ -10,15 +11,26 @@ const title = `Error 404`;
     <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
       <div class="max-w-md text-center">
         <h2 class="mb-8 font-bold text-9xl">
-          <span class="sr-only">Error</span>
+          <span class="sr-only">Jejda...</span>
           <span class="text-primary">404</span>
         </h2>
-        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+        <p class="text-3xl font-semibold md:text-3xl">Ano, i mistr tesař se občas utne. Promiň!</p>
         <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
-          But dont worry, you can find plenty of other things on our homepage.
+          Náš IT tým se na to jukne a co nejdříve to opraví. Zatím dělej, že se nic nestalo :-)
         </p>
-        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Takže kam... na hlavní stránku třeba?</a
+        >
       </div>
+      <Picture
+        src={Tym}
+        class="inset-0 object-cover object-top rounded-md shadow-lg mx-auto bg-gray-400 dark:bg-slate-700 transition-all duration-800 cursor-pointer mt-10"
+        widths={[200]}
+        sizes="(max-width: 200px)"
+        width={200}
+        height={200}
+        alt="IT tým antikoncepce.com"
+      />
     </div>
   </section>
 </Layout>

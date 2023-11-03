@@ -1,0 +1,79 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import LatestPostsGlobal from '~/components/blog/LatestPostsGlobal.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const meta = {
+  title: 'Časté dotazy - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout metadata={meta}>
+  <FAQs
+    title="Časté dotazy"
+    subtitle="Zde najdete odpovědi na časté dotazy, které nám kladete."
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Která tableta je nejlepší?',
+        description:
+          'Ta nejlepší tableta zatím nebyla vynalezena. V každém případě je výběr té nejlepší tablety závislý na vrozených předpokladech pacientky, aktuálním zdravotním stavu ženy a její citlivosti a v neposlední řadě také na finanční situaci. V posledních letech rozšířil výběr antikoncepčních tablet, takže si každý může najít - dle již dříve jmenovaných aspektů - tabletu, která je nejvhodnější. Doporučení správných antikoncepčních tablet je úkolem gynekologa.',
+        anchor: 'ktera-tableta-je-nejlepsi',
+      },
+      {
+        title: 'Kterou tabletu nejdříve?',
+        description:
+          'Ponecháme-li stranou kondom, jehož výhody pro mladou populaci jsou jasné a nepochybné, je obecně pro adolescentní dívku nejvhodnější kombinovaná hormonální antikoncepce. Její velkou výhodou v této věkové skupině je příznivý vliv na bolestivost a sílu menstruací a na pokles rizika pánevních zánětů. U mladých dívek není rozdíl mezi přípravky s novými typy progestinů a přípravky staršími, rovněž mezi tzv. monofázickými a trifázickými preparáty. <strong>Předpis antikoncepce patří do rukou lékaře - gynekologa.</strong>',
+        anchor: 'kterou-tabletu-nedjrive',
+      },
+      {
+        title: 'Kdy se obrátit na gynekologa?',
+        description: `
+                    <ol style="list-style:disc" class="ml-4">
+                        <li>Pokud se rozhodnete užívat antikoncepci.</li>
+                        <li>V případě výskytu potíží.</li>
+                        <li>Každoročně, a to i v případě, že se potíže nevyskytnou.</li>
+                        <li>V případě výrazné změny zdravotního stavu.</li>
+                        <li>Pokud plánujete změnu antikoncepce.</li>
+                    </ol>
+                    <br />
+                    Nepřijímejte tablety ani rady od nekompetentních osob. Reklamy v mediích jsou často zavádějící, tvrdí, že doporučovaná antikoncepce je stejně vhodná pro každého.
+                    `,
+        anchor: 'kdy-se-obratit-na-gynekologa',
+      },
+      {
+        title: 'Hormonální antikoncepce a gravidita',
+        description: `
+                    Hormonální antikoncepce není nebezpečná pro narozené děti. Nepočítáme se vznikem poškození plodu ani v případě, že žena otěhotní během užívání tablet. Nicméně doporučujeme vysadit kontraceptiva 3 měsíce před plánovaným těhotenstvím, aby se stačila obnovit rovnováha měsíčního cyklu, jelikož tato nerovnováha může zvýšit riziko spontánního potratu.
+                    `,
+        anchor: 'hormonalni-antikoncepce-a-gravidita',
+      },
+      {
+        title: `Jak dlouho mohou být tablety užívány?`,
+        description: `Věk není nemocí, proto není kontraindikací pro hormonální antikoncepci. Tablety jsou kontraindikovány až v přechodu, kdy antikoncepce již není nutná. Samozřejmě výskyt onemocnění, kdy může být užívání hormonální antikoncepce nebezpečné, s věkem stoupá. Hormonální antikoncepce může být používána až do klimakteria (45 - 50 let). Na užívání antikoncepce je vhodné navázat hormonálními substitučními léky v přechodu, aby se předcházelo stárnutí a nemocem provázejícím stárnutí.`,
+        anchor: 'jak-dlouho-mohou-byt-tablety-uzivany',
+      },
+      {
+        title: `Kdy tablety změnit?`,
+        description: `Pokud se antikoncepce osvědčí, je nesmyslné ji měnit. Důvodem k výměně tablet je výskyt vedlejších účinků, změna zdravotního stavu a věk ženy. Za změnu antikoncepčního přípravku zodpovídá gynekolog.`,
+        anchor: 'kdy-tablety-zmenit',
+      },
+      {
+        title: `Obnovení plodnosti`,
+        description: `Obnovení plodnosti nastává zpravidla 1-3 měsíce po vysazení tablet. Proto doporučujeme tablety vysadit 3 měsíce před plánovaným otěhotněním. Pokud žena neotěhotní do jednoho roku, je třeba pátrat po jiné příčině neplodnosti.`,
+        anchor: 'obnoveni-plodnosti',
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <LatestPostsGlobal />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- CallToAction Widget *********** -->
+</Layout>

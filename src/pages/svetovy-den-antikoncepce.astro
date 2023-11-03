@@ -1,0 +1,85 @@
+---
+import Contact from '~/components/react/ContactForm';
+import Steps from '~/components/widgets/Steps.astro';
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout metadata={meta}>
+  <section
+    class="hero relative h-full"
+    style={{
+      height: 600,
+    }}
+  >
+    <div
+      class="inset-0 overflow-hidden"
+      style={{
+        height: 600,
+      }}
+    >
+      <iframe
+        class="absolute inset-0 w-full"
+        src="https://www.youtube.com/embed/Es9epfKhX1o?autoplay=1&mute=1&loop=1&controls=0"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        style={{
+          height: 600,
+        }}></iframe>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto p-10">
+    <p>
+      Dnešní svět je složitý. Jsme stále v pohybu, hledáme rovnováhu mezi prací a osobním životem, hledáme vztahy plné
+      lásky a přátelství. Chceme, abychom si mohli užívat své životy naplno, aniž bychom se báli nechtěného těhotenství.
+    </p>
+
+    <Steps
+      title="Světový den antikoncepce: Náš Krok k Harmonii a Svobodě"
+      items={[
+        {
+          title: 'Shoda (Match)',
+          description:
+            'Antikoncepce nám umožňuje plánovat, kdy budeme mít děti. To nám dává možnost najít shodu mezi našimi cíli a rodinným životem.',
+          icon: 'tabler:circle-1',
+        },
+        {
+          title: 'Rovnováha (Balance)',
+          description:
+            'Antikoncepce nám dává kontrolu nad naším reprodukčním zdravím a plánováním rodiny, což nám pomáhá najít rovnováhu mezi různými aspekty našeho života.',
+          icon: 'tabler:circle-2',
+        },
+        {
+          title: 'Svoboda (Freedom)',
+          description:
+            'Díky antikoncepci máme svobodu rozhodnout se, kdy a zda budeme mít děti. To nám umožňuje plánovat svůj život podle našich vlastních představ.',
+          icon: 'tabler:circle-3',
+        },
+        {
+          title: 'Přátelství (Friendship)',
+          description:
+            'Antikoncepce nám umožňuje budovat pevné vztahy s našimi partnery a přáteli, aniž bychom museli řešit nechtěné těhotenství.',
+          icon: 'tabler:circle-4',
+        },
+        {
+          title: 'Pohodlí (Convenience)',
+          description:
+            'Moderní antikoncepční metody jsou pohodlné a snadno dostupné, což nám usnadňuje péči o naše reprodukční zdraví.',
+          icon: 'tabler:circle-5',
+        },
+      ]}
+      image={{
+        src: '~/assets/images/the_girl.png',
+        alt: 'Steps image',
+        // class: HIDE_ON_MOBILE
+      }}
+    />
+    <Contact client:visible />
+  </div>
+</Layout>

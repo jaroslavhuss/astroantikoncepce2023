@@ -1,0 +1,19 @@
+---
+interface Props {
+    seznam:string[]; // let seznam = ["item1", "item2"];
+}
+
+const { seznam } = Astro.props as Props;
+---
+
+<div>
+    <ul>
+        {
+            seznam.map((polozka:string)=>{
+                return(
+                    <li>{polozka}</li>
+                )
+            })
+        }
+    </ul>
+</div>

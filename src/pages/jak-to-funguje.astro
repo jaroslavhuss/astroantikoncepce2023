@@ -1,0 +1,75 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import LatestPostsGlobal from '~/components/blog/LatestPostsGlobal.astro';
+
+const meta = {
+  title: 'Jak to funguje? - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout metadata={meta}>
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Jak to funguje?"
+    items={[
+      {
+        title: 'Zabraňuje ovulaci (uvolnění vajíčka)',
+      },
+      {
+        title: 'Způsobuje zahuštění cervikálního hlenu a tím zhoršuje podmínky pro průchod spermií děložním hrdlem',
+      },
+      {
+        title: 'Snižuje výšku endometria (sliznice v dutině děložní) a tím zabraňuje uhnízdění oplodněného vajíčka',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/tehotenstvi.png',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <p>
+        Jen málo skupin léků je opředeno tak velkým množstvím mylných informací jako antikoncepce. I média publikovala
+        několik článků o nešťastných osudech žen, které užívaly antikoncepci a o vážných onemocněních způsobených
+        "tabletami". Avšak skutečnost, že hormonální antikoncepce je významným ochranným faktorem zdraví, je veřejnosti
+        známá méně.
+      </p>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 mt-6">
+        Jak antikoncepce zabraňuje otěhotnění?
+      </h3>
+      <p>
+        Záleží na typu antikoncepce, zda se jedná o antikoncepci kombinovanou (obsahuje estrogen a gestagen) nebo čistě
+        gestagenní (obsahuje pouze gestagen).
+      </p>
+    </Fragment>
+  </Content>
+
+  <section>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
+      <p>
+        Stále vyšší počet celosvětově uznávaných odborníků hormonální antikoncepci upřednostňuje. V roce 1973 se
+        delegáti zemí střední a východní Evropy zúčastnili konference organizované Světovou zdravotnickou organizací
+        (WHO) v maďarském Segedu. Cílem této konference bylo analyzovat tragickou situaci gynekologické osvěty v dané
+        oblasti, zjistit její příčiny a najít řešení. Statistická data ukázala výhody antikoncepce a proto dle
+        doporučení WHO má propagace hormonální antikoncepce pro zdraví populace velký význam. Není náhodou, že mnoho
+        odborníků zastává názor, že hormonální antikoncepce je jedním z nejdůležitějších mezníků v historii medicíny,
+        vedle imunizace a antibiotik.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Widget **************** -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <LatestPostsGlobal />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- CallToAction Widget *********** -->
+</Layout>

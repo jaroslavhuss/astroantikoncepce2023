@@ -1,0 +1,165 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import LatestPostsGlobal from '~/components/blog/LatestPostsGlobal.astro';
+
+const meta = {
+  title: 'Jaká jsou rizika - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout metadata={meta}>
+  <Content
+    title="Jaká jsou rizika?"
+    items={[
+      {
+        title:
+          'ženy, které trpí trombofilní mutací (vrozené onemocnění které způsobuje zvýšené srážení krve, např. Leidenská mutace)',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+      {
+        title: 'ženy, které hodně kouří (nejméně 15 cigaret denně) a jsou starší 35 let',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+      {
+        title: 'ženy, které trpí vysokým krevním tlakem',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+      {
+        title: 'diabetičky s cévním poškozením',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+      {
+        title: 'ženy s poruchami metabolismu tuků',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+      {
+        title: 'ženy s výraznými křečovými žilami nebo jinými cévními chorobami',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+      {
+        title: 'ženy s režimem dlouhodobého klidu na lůžku (onemocnění, operace, úrazy)',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+      {
+        title: 'ženy u nichž je v rodině úmrtí na srdeční onemocnění ve věku do 50 let.',
+        description: '',
+        icon: 'tabler:alert-circle',
+        iconColor: 'bg-red-500',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/zena-trpici-bolestmi-spojenymi-s-uzivanim-antikoncepce-com.png',
+      alt: 'Obrázek, který symbolizuje rizika spojená s uživáním antikoncepce - antikoncepce.com',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Rizika hormonální antikoncepce</h3>
+      <p>
+        Obstrukce cév - trombóza je způsobena hlavně tvorbou krevních sraženin, což je přisuzováno hlavně estrogenní
+        složce. Estrogeny zvyšují produkci a tvorbu některých faktorů krevní srážlivosti, proto se zvyšuje srážlivost
+        krve. Pokud je toto doprovázeno poraněním cévní stěny nebo zpomalením toku krve, je riziko ještě vyšší. Zvláště
+        ohroženy jsou následující skupiny:
+      </p>
+    </Fragment>
+  </Content>
+
+  <section>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
+      <p>
+        U žen, které nepatří do žádné z těchto rizikových skupin, se během užívání hormonální antikoncepce riziko téměř
+        nezvyšuje. Cévní obstrukce se projevuje nejčastěji formou hluboké žilní trombózy a plicní embolie. Jiné formy,
+        například infarkt myokardu nebo mozková mrtvice jsou extrémně vzácné.
+      </p>
+    </div>
+  </section>
+  <Features2
+    items={[
+      {
+        title: 'Zvýšení tělesné hmotnosti',
+        description:
+          'Ve většině případů může být zvýšení hmotnosti, které se rozvinulo v průběhu užívání hormonální antikoncepce, přičítáno nezdravému způsobu života, a ne hormonálním přípravkům. Ve zbývajících případech se může zvyšování hmotnosti předejít nebo zastavit správným výběrem hormonální antikoncepce. Nejmodernější antikoncepci, která zároveň obsahuje nejnižší množství hormonů, není třeba přisuzovat zapříčinění zvýšení tělesné hmotnosti.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Nezhoubné (benigní) nádory jater',
+        description:
+          'V rozporu se všemi pověrami je to velmi vzácné onemocnění. Za rok se vyskytuje pouze jeden případ z milionu. Může být komplikováno břišním krvácením, které se vyskytuje u 10 % pacientek. Krvácení se léčí chirurgicky. Výskyt, a tedy riziko nádorů jater, které způsobují nitrobřišní krvácení, je nízké v porovnání s rizikem mimoděložního těhotenství, jehož vzniku hormonální antikoncepce zamezuje téměř ve 100 %.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Menstruační anomálie',
+        description:
+          'Během užívání hormonální antikoncepce, zvláště v prvních měsících, se může objevit krvácení mezi menstruacemi (tzv. intermenstruační krvácení), nebo se pravidelná menstruace nedostaví. Tento jev není škodlivý a většinou po čase sám vymizí. Proto nepravidelné krvácení není důvodem k přerušení užívání hormonální antikoncepce. Pokud se tato nepříjemná situace opakuje, může být vyřešena výběrem jiného antikoncepčního přípravku.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Bolest hlavy',
+        description:
+          'Pokud je bolest hlavy příliš intenzivní, často se opakuje nebo je doprovázena poruchami zraku nebo sluchu, je třeba obrátit se na lékaře.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Změna barvy kůže',
+        description:
+          'V některých případech se mohou objevit na pokožce "jaterní skvrny", zvláště na místech vystavených slunci. Tato kosmetická vada se může časem zhoršit, proto se v těchto případech doporučuje vysazení hormonální antikoncepce.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Pocit napětí prsů',
+        description:
+          'Některá hormonální antikoncepce vlivem svého složení nebo vlivem individuální citlivosti může způsobit pocit napětí prsů. Tento problém je obvykle přechodný na začátku užívání tablet, pokud přetrvává, doporučuje se změnit složení tablet.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Metabolismus cukrů',
+        description:
+          'Hormonální antikoncepce u zdravých žen neovlivňuje metabolismus cukrů. Díky nízkému obsahu hormonů v moderní antikoncepci mohou také ženy s cukrovkou antikoncepci užívat, samozřejmě pod náležitým lékařským dohledem.',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Vysoký krevní tlak (hypertenze)',
+        description:
+          'Při pravidelné lékařské kontrole a léčbě hypertenze bez poškození cévních stěn není hormonální antikoncepce kontraindikována. Pokud má žena hraniční tlak nebo stabilizovanou hypertenzi, je vhodné volit takové složení antikoncepce, které lehce odvodňuje a tím pomáhá snižovat vyšší krevní tlak. ',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Metabolismus tuků',
+        description: 'Kombinovaná antikoncepce aterosklerózu nezpůsobuje, ale naopak ji zpomaluje. ',
+        icon: 'tabler:info-circle',
+      },
+      {
+        title: 'Žlučníkové komplikace',
+        description:
+          'Hormonální antikoncepce nezpůsobuje vznik žlučových kamenů (cholelitiázu). Ale při jejich existenci se může zvýšit frekvence žlučníkových záchvatů. V případě, že žena má poruchu průtoku žluče následkem vytvoření kamenů v průběhu předchozího těhotenství (těhotenská žloutenka, svědění na celém těle), může se s vyšší pravděpodobností tento problém opakovat v průběhu užívání hormonální antikoncepce.',
+        icon: 'tabler:info-circle',
+      },
+    ]}
+  />
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <LatestPostsGlobal />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- CallToAction Widget *********** -->
+</Layout>

@@ -1,0 +1,16 @@
+---
+import LatestPosts from "./LatestPosts.astro";
+---
+<!-- This component will display VERY last items-->
+<hr>
+<section class="bg-gradient-to-br from-slate-50 via-slate-200 to-pink-100">
+<LatestPosts
+    title="Poslední příspěvky"
+    postIds={[
+      'get-started-website-with-astro-tailwind-css.md',
+      'how-to-customize-astrowind-to-your-brand.md',
+      'useful-resources-to-create-websites.md',
+      'astrowind-template-in-depth.md',
+    ]}
+  />
+</section>

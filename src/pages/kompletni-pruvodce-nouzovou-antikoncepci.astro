@@ -1,0 +1,102 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import LatestPostsGlobal from '~/components/blog/LatestPostsGlobal.astro';
+import TheGirlAnimation from '~/components/react/TheGirlAnimation';
+import Tabs from '~/components/react/Tabs';
+import TabsImage from '~/components/react/TabsImage';
+import StepsImage from '~/components/react/StepsImage';
+import Carousel from '~/components/react/Carousel';
+import Steps from '~/components/react/Steps';
+import Calculator from '~/components/react/EmergencyContraceptionCalc';
+import FAQ from '~/components/react/FAQ';
+import Contact from '~/components/react/ContactForm';
+const meta = {
+  title: 'Kompletní průvodce nouzovou antikoncepcí - ' + SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout metadata={meta}>
+  <div class="bg-white w-full max-w-7xl mx-auto mt-5">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-center">
+      Kompletní průvodce nouzovou antikoncepcí
+    </h1>
+    <div class="w-full mx-auto">
+      <p class="text-xl text-gray-600 text-justify md:text-center lg:text-center xl:text-center px-2 max-w-3xl mx-auto">
+        <strong>Nouzová antikoncepce</strong> je metoda, která se používá po nechráněném pohlavním styku, kdy je riziko
+        těhotenství. Může se jednat o nechtěný styk, nebo o selhání jiné antikoncepce. V tomto článku najdete všechny
+        informace o nouzové antikoncepci, které potřebujete vědět.
+      </p>
+      <TheGirlAnimation client:visible />
+    </div>
+  </div>
+  <section class="bg-gradient-to-br from-white via-slate-100 to-purple-100 py-10 w-full">
+    <Tabs />
+  </section>
+  <section class="bg-gradient-to-br from-purple-900 via-purple-600 to-purple-200 py-10 w-full">
+    <h2
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-center text-white-gradient"
+    >
+      Přehled všech pojmů a metod nouzové antikoncepce
+    </h2>
+    <TabsImage />
+    <div class="max-w-3xl mx-auto">
+      <Carousel client:visible />
+    </div>
+  </section>
+  <section class="bg-white py-10 w-full">
+    <h2
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-center text-black-gradient"
+    >
+      Oplodnění krok po kroku (a kdy si vzít pilulku)
+    </h2>
+    <StepsImage />
+    <div class="max-w-3xl mx-auto">
+      <Steps client:visible />
+    </div>
+  </section>
+  <section class="py-10 w-full bg-gradient-to-br from-red-200 via-pink-100 to-purple-200">
+    <h2
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-center text-black-gradient"
+    >
+      Spočítej si, zda si stihneš vzít pilulku
+    </h2>
+    <p class="text-xl text-gray-600 text-justify md:text-center lg:text-center xl:text-center px-2 max-w-3xl mx-auto">
+      <strong>Nejčastější chyba</strong>, kterou lidé dělají, je že si vzpomenou na pilulku až po 72 hodinách. V takovém
+      případě je pilulka k ničemu. Proto je důležité si spočítat, zda si pilulku stihnete vzít včas. <br />
+      <small class="text-xs">(níže uvedný výpočet je pouze orientační a nemůže nahradit lékařskou konzultaci)</small>
+    </p>
+    <div class="max-w-3xl mx-auto">
+      <Calculator client:visible />
+    </div>
+  </section>
+  <section class="py-10 w-full bg-gradient-to-br from-green-200 via-green-50 to-green-100">
+    <h2
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-center text-black"
+    >
+      Ptáše se? My odpovídáme!
+    </h2>
+
+    <div class="max-w-3xl mx-auto">
+      <FAQ client:visible />
+    </div>
+  </section>
+  <section class="py-10 w-full bg-gradient-to-br from-red-200 via-red-50 to-red-100">
+    <h2
+      class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-center text-black"
+    >
+      Máš dotaz? Dej nám vědět!
+    </h2>
+
+    <div class="max-w-3xl mx-auto flex justify-center align-middle">
+      <Contact client:visible className=" mx-auto text-center my-8" />
+    </div>
+  </section>
+  <LatestPostsGlobal />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- CallToAction Widget *********** -->
+</Layout>

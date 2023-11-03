@@ -253,6 +253,7 @@ export interface Faqs extends Headline, Widget {
   iconUp?: string;
   iconDown?: string;
   items?: Array<Item>;
+  answer?: string;
   columns?: number;
 }
 
